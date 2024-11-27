@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serifSS;
+}
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('MyCustomFont.woff2') format('woff2'),
+         url('MyCustomFont.woff') format('woff');
+}
+body{
+background-image:url(../images/images.jfif);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.contener{
+    margin: 35px;
+    display:flex;
+    position: relative;
+    justify-content: space-between;
+    width: 90%;
+    height: 90vh;
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    color: white;
+}
+.list{
+    background-color: white;
+    position: absolute;
+    height: 100%;
+    width: 30%;
+}
+.header{
+    background-color:rgba(17, 25, 40, 0.75);
+    position: absolute;
+    height: 10%;
+    width: 62%;
+    left: 410px;
+    top: 38px;
+    color: white;
+    justify-content: space-between;
+    display: flex;
+}
+.header h3{
+    font-family: 'Roboto', sans-serif;
+    
+}
+.header img{
+    border-radius: 13px;
+}
+.inner{
+    background-color: black;
+    position: absolute;
+    height: 79%;
+    width: 50%;
+    left: 410px;
+    bottom: 28px;
+}
+.detail{
+    background-color: white;
+    position: absolute;
+    height: 79%;
+    width: 12%;
+    right: 68px;
+    bottom: 29px;
+}
+
+button.faiz a {
+    color: black;
+    border: 0cap;
+    text-decoration: line-through;
+    text-align: right;
+    left: 50px;
+}
+.header+button.faiz a{
+    justify-content: end;
+}
