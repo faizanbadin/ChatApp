@@ -1,63 +1,83 @@
 body{
-background-image:url(../images/images.jfif);
-display: flex;
-align-items: center;
-justify-content: center;
-}
-
-
-.contenner{
-        display: flex;
-        margin: 35px;
-        position: relative;
-        width: 90%;
-        height: 90vh;
-        background-color: rgba(150, 175, 222, 0.75);
-        border-radius: 12px;
-        color: white;
-    }
-    .inner{
-        margin: 35px;
-        position: absolute;
-        left: 235px;
-        width: 87vh;
-        height: 78vh;
-        background-color: rgba(17, 25, 40, 0.75);
-        border-radius: 12px;
-        color: white;
-        
-    }
-.inner h4{
-    display: flex;
-    color: rgb(255, 255, 255);
-    justify-content: center;
-    
-}
-.heading{
-    margin-top: 22px;
-}
-
-
-.text{
-    margin: 65px;
+    margin: 10px;
+    padding: 10px;    
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-    justify-content: space-between;
-    
-}
-.text input{
-    padding: 10px;
+    background-size: cover;
+    background-position: center;
     display: flex;
-    margin-bottom: auto;
-    width: 100%;
-    border-radius: 13px;   
+    align-items: center;
+    justify-content: start;
+    height: 100vh;
+    background-image: url(../images/images.jfif);
+    
 }
-.text label{
-    size: bold;
+
+
+.containeer{
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgba(17, 25, 40, 0.85);
+    border-radius: 12px;
     color: white;
+    box-shadow: 0 4px 6pc rgba(0, 0, 0, 0.3);
+    justify-content: start;
+}
+
+.form-box{
+    text-align: center;
+}
+h2{
+margin-bottom: 20px;
+}
+
+.input-group{
+    margin-bottom: 15px;
+    text-align: left;
+}
+.input-group label{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 3px;
+}
+.input-group input{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: aliceblue;
+    font-size: 16px;
 
 }
-.btn-light a{
-    color: black;
+.input-group input:focus{
+    outline: none;
+    border: 1px solid #007bff;
+}
+.btn{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
     
 }
+.btn:hover{
+    background-color: #0056b3;
+}
+.extra-text{
+    margin-top: 15px;
+    font-size: 14px;
+}
+.exta-text a{
+    color: #7a8a9c;
+    text-decoration: none;
+}
+.exta-text a:hover{
+    text-decoration: underline;
+}
+
