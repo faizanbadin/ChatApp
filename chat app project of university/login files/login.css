@@ -8,21 +8,71 @@ body{
     align-items: center;
     justify-content: start;
     height: 100vh;
-    background-image: url(../images/images.jfif);
+    background-color: #181818;
     
 }
-
-
-.containeer{
+/* From Uiverse.io by alexruix */ 
+.card {
+    --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
     width: 100%;
     max-width: 400px;
+    height: auto;
     padding: 20px;
-    background-color: rgba(17, 25, 40, 0.85);
-    border-radius: 12px;
+    border-radius: 1rem;
+    overflow: visible;
+    background: #f7ba2b;
+    background: var(--background);
+    position: relative;
+    z-index: 1;
     color: white;
-    box-shadow: 0 4px 6pc rgba(0, 0, 0, 0.3);
-    justify-content: start;
-}
+   }
+   
+   .card::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.8);
+    filter: blur(25px);
+    background: #f7ba2b;
+    background: var(--background);
+    transition: opacity .5s;
+   }
+   
+   .card-info {
+    --color: #181818;
+    background: var(--color);
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    border-radius: .7rem;
+   }
+   
+   .card .title {
+    font-weight: bold;
+    letter-spacing: .1em;
+   }
+   
+   /*Hover*/
+   .card:hover::after {
+    opacity: 0;
+   }
+   
+   .card:hover .card-info {
+    color: #f7ba2b;
+    transition: color 1s;
+   }
+   
+
+
 
 .form-box{
     text-align: center;
@@ -60,17 +110,18 @@ margin-bottom: 20px;
     border: none;
     border-radius: 8px;
     background-color: #007bff;
-    color: white;
+    color: wheat;
     font-size: 16px;
     cursor: pointer;
     margin-top: 10px;
     
 }
-.btn:hover{
-    background-color: #0056b3;
+.btn:hover a{
+    
+    color: white;
 }
 .extra-text{
-    margin-top: 15px;
+    margin-top: 10px;
     font-size: 14px;
 }
 .exta-text a{
@@ -80,4 +131,123 @@ margin-bottom: 20px;
 .exta-text a:hover{
     text-decoration: underline;
 }
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 10px;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    justify-content: start;
+  }
+  
+  .wrapper .icon {
+    position: relative;
+    background: #eb525200;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  .wrapper .facebook:hover,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip::before {
+    background: #1877f2;
+    color: #fff;
+  }
+  .wrapper .twitter:hover,
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip::before {
+    background: #1da1f2;
+    color: #fff;
+  }
+  .wrapper .instagram:hover,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    background: #e4405f;
+    color: #fff;
+  } 
+.typewriter-box {
+    width: 50%; 
+    display: flex;
+    flex-direction: column;  
+    justify-content: end;
+    align-items: center;
+    font-size: 46px;
+    font-weight: bold;
+    color: transparent;
+    background: linear-gradient(90deg, #FFD700, #FF6347, #1E90FF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-align: center;
+    animation: gradient-text 3s infinite;
+    letter-spacing: 2px;
+    white-space: normal; 
+    word-wrap: break-word; 
+    line-height: 1.4; 
+    padding-left: 70px;
+}
+#typing-text {
+    border-right: 3px solid #FFD700; 
+    white-space: normal; 
+    overflow-wrap: break-word; 
+}
+@keyframes gradient-text {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+@keyframes blink {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: #FFD700; }
+}
+#typing-text {
+    animation: blink 0.7s infinite;
+}
+
+
 
