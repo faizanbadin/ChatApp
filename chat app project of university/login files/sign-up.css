@@ -1,58 +1,46 @@
-body{
-    background-image:url(../images/images.jfif);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    }
-    
-    
-    .contenner{
-            display: flex;
-            margin: 25px;
-            position: relative;
-            width: 90%;
-            height: 90vh;
-            background-color: rgba(150, 175, 222, 0.75);
-            border-radius: 12px;
-            color: white;
-        }
-        .inner{
-            margin: 25px;
-            position: absolute;
-            left: 235px;
-            width: 87vh;
-            height: 78vh;
-            background-color: rgba(17, 25, 40, 0.75);
-            border-radius: 12px;
-            color: white;
-            
-        }
-    .inner h4{
-        display: flex;
-        color: rgb(255, 255, 255);
-        justify-content: center;
-    }
-    .text{
-        margin: 55px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        
-        justify-content: space-between;
-        
-    }
-    .text input{
-        padding: 5px;
-        display: flex;
-        margin-bottom: auto;
-        width: 100%;
-        border-radius: 13px;   
-    }
-    .text label{
-        size: bold;
-        color: white;
-    
-    }
-    .btn-light a{
-        color: black;
-        
-    }
-    
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-up</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+  <div class="card">
+    <div class="form-box">
+        <h2>SIGN-UP</h2>
+        <form action="">
+            <div class="input-group">
+                <label for="user">User-Name</label>
+                <input type="text" id="user" placeholder="Please Enter Your Name" required>
+
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Please Enter Your Email Adress" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Please Enter Your password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+            </div>
+            <button type="submit" class="btn">SIGN-UP</button>
+        </form>
+        <p class="exta-text">Already have an account?<a href="./login.html">LOGIN</a></p>
+    </div>
+  </div>
+  <div class="typewriter-box">
+    <div id="typing-text"></div>
+</div>
+</div>
+<script src="./login.js"></script>
+</body>
+</html>
+
+
+
