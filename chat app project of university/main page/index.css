@@ -1,79 +1,243 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serifSS;
-}
-@font-face {
-    font-family: 'MyCustomFont';
-    src: url('MyCustomFont.woff2') format('woff2'),
-         url('MyCustomFont.woff') format('woff');
-}
-body{
-background-image:url(../images/images.jfif);
-display: flex;
-align-items: center;
-justify-content: center;
-}
-.contener{
-    margin: 35px;
-    display:flex;
-    position: relative;
-    justify-content: space-between;
-    width: 90%;
-    height: 90vh;
-    background-color: rgba(17, 25, 40, 0.75);
-    border-radius: 12px;
-    color: white;
-}
-.list{
-    background-color: white;
-    position: absolute;
-    height: 100%;
-    width: 30%;
-}
-.header{
-    background-color:rgba(17, 25, 40, 0.75);
-    position: absolute;
-    height: 10%;
-    width: 62%;
-    left: 410px;
-    top: 38px;
-    color: white;
-    justify-content: space-between;
-    display: flex;
-}
-.header h3{
     font-family: 'Roboto', sans-serif;
-    
-}
-.header img{
-    border-radius: 13px;
-}
-.inner{
-    background-color: black;
-    position: absolute;
-    height: 79%;
-    width: 50%;
-    left: 410px;
-    bottom: 28px;
-}
-.detail{
-    background-color: white;
-    position: absolute;
-    height: 79%;
-    width: 12%;
-    right: 68px;
-    bottom: 29px;
 }
 
-button.faiz a {
+body {
+    /* background-image: url('../images/images.jfif'); */
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 90vh;
+    background-color: rgba(17, 25, 40, 0.85);
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 12px;
+}
+
+.header img {
+    height: 50px;
+    border-radius: 10px;
+}
+
+.header h3 {
+    margin: 0;
+    color: transparent;
+    background: linear-gradient(90deg, #FFD700, #FF6347, #1E90FF);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.header h3:hover{
+    font-size: 40px;
+    font-weight: bolder;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    
+}
+
+.logout-btn  {
+    font-size: 14px;
+    padding: 5px 10px;
+    background: linear-gradient(90deg, #FFD700, #FF6347, #1E90FF);
+    color: white;
+}
+.logout-btn a:hover{
     color: black;
-    border: 0cap;
-    text-decoration: line-through;
+    background: linear-gradient(90deg, #FFD700, #FF6347, #1E90FF);
+    font-size: 18   px;
+    font-weight: bolder;
+}
+
+
+.content {
+    display: flex;
+    flex: 1;
+    gap: 15px;
+    padding: 20px;
+}
+
+.list,
+.inner,
+.detail {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.list {
+    flex: 0.3;
+}
+
+.inner {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    color: bisque;
+}
+
+.detail {
+    flex: 0.2;
+    color: #b7b7b7;
+}
+
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.contact-list li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    cursor: pointer;
+    align-items: center;
+    font-weight: bolder;
+    color: #b7b7b7;
+    
+}
+.contact-list li img{
+    width: 40px;
+    height: auto;
+    border-radius: 30px;
+    margin-right: 15px;
+
+}
+.contact-list li:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.chat-box {
+    flex: 1;
+    margin-bottom: 10px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.chat-box .message {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    max-width: 70%;
+    display: inline-block;
+}
+
+.chat-box .received {
+    background: rgba(255, 255, 255, 0.2);
+    align-self: flex-start;
+    text-align: left;
+    border-bottom-left-radius: 0;
+}
+
+.chat-box .sent {
+    background: rgba(0, 123, 255, 0.5);
+    align-self: flex-end; 
     text-align: right;
-    left: 50px;
+    border-bottom-right-radius: 0;
 }
-.header+button.faiz a{
-    justify-content: end;
+
+.chat-input {
+    display: flex;
+    gap: 10px;
 }
+
+.chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+.chat-input button {
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+
+.detail p {
+    margin-bottom: 10px;
+}
+button  {
+    font-family: inherit;
+    font-size: 20px;
+    background: royalblue;
+    color: white;
+    padding: 0.7em 1em;
+    padding-left: 0.9em;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  
+  button span {
+    display: block;
+    margin-left: 0.3em;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  button svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  button:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+  }
+  
+  button:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+  }
+  
+  button:hover span {
+    transform: translateX(5em);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  @keyframes fly-1 {
+    from {
+      transform: translateY(0.1em);
+    }
+  
+    to {
+      transform: translateY(-0.1em);
+    }
+  }
+  
+
+
